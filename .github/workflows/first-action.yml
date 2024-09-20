@@ -10,7 +10,6 @@ on:
 jobs:
     hello:
         runs-on: ubuntu-latest
-
         steps:
         - name: Hello Step
-          run: echo "hello"
+        run: echo "hello"
