@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        run: echo 'santhosh'
+        run: echo 'santhosh' > /tmp/giri
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
