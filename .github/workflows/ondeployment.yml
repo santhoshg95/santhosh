@@ -1,0 +1,30 @@
+name: First Workflow
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
+
+  
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: install node jobs
+        uses: actions/setup-node@v3
+      - name: Print goodbye
+        run: echo "Done - bye!"
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: running parlallelly
+        run: echo "parrllel execution"
+  third-job:
+    needs: first-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: serial execution
+        run: echo "serial execution"
